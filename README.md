@@ -16,7 +16,7 @@ Practical 8: Data Visualization 1
 
 Practical 9: Data Visualization 2
 
-Practical 10: Data Visualization 3
+Practical 10: Data Visualization 3 (some part remaining)
 
 Practical 11: Map Reduce
 
