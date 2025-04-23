@@ -4,7 +4,7 @@ Practical 2: Data Wrangling 2
 
 Practical 3: Descriptive Statistics
 
-Practical 4: Data Analytics 1
+Practical 4: Data Analytics 1 (Pallavi)
 
 Practical 5: Data Analytics 2
 
