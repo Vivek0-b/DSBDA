@@ -12,7 +12,7 @@ Practical 6: Data Analytics 3
 
 Practical 7: Text Analysis 
 
-Practical 8: Data Visualization 1
+Practical 8: Data Visualization 1 (Nivedita) 
 
 Practical 9: Data Visualization 2
 
