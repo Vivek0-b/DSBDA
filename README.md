@@ -14,9 +14,9 @@ Practical 7: Text Analysis (Pallavi)
 
 Practical 8: Data Visualization 1 (Nivedita) 
 
-Practical 9: Data Visualization 2
+Practical 9: Data Visualization 2 (Nivedita) 
 
-Practical 10: Data Visualization 3 (some part remaining)
+Practical 10: Data Visualization 3 (Nivedita) 
 
 Practical 11: Map Reduce
 
