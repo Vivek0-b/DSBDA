@@ -8,7 +8,7 @@ Practical 4: Data Analytics 1 (Pallavi)
 
 Practical 5: Data Analytics 2
 
-Practical 6: Data Analytics 3 
+Practical 6: Data Analytics 3 (Nivedita) 
 
 Practical 7: Text Analysis (Pallavi)
 
