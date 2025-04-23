@@ -1,4 +1,95 @@
+import numpy as np
+import sklearn as sk
 import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import LabelEncoder  # Importing label encoder for label encoding
+
+df = sns.load_dataset('titanic')
+
+df
+df.isnull().sum() 
+df.drop("deck", axis=1, inplace=True)  # dropping deck column
+
+df.dropna(inplace=True)  # dropping all null values
+
+df.isnull().sum()
+df.info()
+
+sns.boxplot(x='sex', y='age', data=df)
+sns.boxplot(x='sex', y='age', hue='survived', data=df)
+sns.violinplot(x='sex', y='age', data=df, hue='survived')
+
+age_distinct = df.dropna()
+
+age_distinct.shape
+
+datam = age_distinct[age_distinct['sex'] == 'male']
+datam.info()
+datam
+
+data_male = datam['age']
+data_male = sorted(data_male)
+
+data_male
+
+q1 = np.percentile(data_male, 25)
+q3 = np.percentile(data_male, 75)
+
+IQR = q3 - q1
+
+lwr = q1 - (1.5 * IQR)
+upr = q3 + (1.5 * IQR)
+
+print("Q1 =", q1)
+print("\nQ3 =", q3)
+print("\nIQR =", IQR)
+print("Lower Bound:", lwr)
+print("Upper Bound:", upr)  # Calculating IQR
+
+out = []
+for i in data_male:
+    if i < lwr:
+        print(i)
+    if i >= upr:
+        print(i)  # Calculating Outlier
+
+data_female = age_distinct[age_distinct['sex'] == 'female']
+data = data_female['age']
+data = sorted(data)
+
+q1 = np.percentile(data, 25)
+q3 = np.percentile(data, 75)
+
+IQR = q3 - q1
+
+lwr = q1 - (1.5 * IQR)
+upr = q3 + (1.5 * IQR)
+
+print("Q1 =", q1)
+print("\nQ3 =", q3)
+print("\nIQR =", IQR)
+print("Lower Bound:", lwr)
+print("Upper Bound:", upr)  # For female
+
+out = []
+for i in data:
+    if i < lwr:
+        print(i)
+    if i >= upr:
+        print(i)  # Calculating Outliers
+
+sns.violinplot(x='sex', y='age', data=df, hue='survived', split=True)
+sns.stripplot(x='age', y='sex', data=df, hue='survived')
+sns.swarmplot(x='sex', y='age', data=df, hue="survived")
+sns.swarmplot(x='age', y='sex', data=df, hue='survived')
+
+
+
+
+
+Data Visualization 3 raw code
+
 import numpy as np
 import pandas as pd
 
