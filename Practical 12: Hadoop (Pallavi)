@@ -1,0 +1,38 @@
+Hadoop instructions
+1. su - Hadoop
+2. Files ke other locations, computer mein search karo hadoop likh ke
+3. Hadoop ke hadoop folder mein data.txt
+banana hai nano se
+4. Start sh
+5. Ifconfig se ip address copy karo aur uske aage 9870 add karo
+6. Hadoop ka page khulega, utilties -> browse file system
+7. Admin waali link mein input.txt aur folder directory ka naam apna waala de
+8. Javac classpath se com javatpoint mein teeno java codes ka class files banta hai
+
+code to run in terminal 
+java -version
+su - hadoop
+cd hadoop
+hadoop version
+nano data1.txt
+put following text into data1.txt
+   	 HDFS is a storage unit of Hadoop
+   	 MapReduce is a processing tool of Hadoop
+    press control + s then control x
+
+start-all.sh
+hdfs dfs -mkdir /test_wc
+hdfs dfs -put admin:///home/hadoop/hadoop/data1.txt /test_wc
+Ifconfig
+  put following URL in firefox
+  Ip address followed by :9870
+  go to utilities
+  browse the file system
+  type /test_wc
+nano WC_Mapper.java
+nano WC_Reducer.java
+Nano WC_Runner.java
+javac -classpath "$(hadoop classpath)" -d . WC_Mapper.java WC_Reducer.java WC_Runner.java
+jar -cvf wordcount.jar com
+hadoop jar /home/hadoop/hadoop/wordcount.jar com.javatpoint.WC_Runner /test_wc/data1.txt /r_output
+hdfs dfs -cat /r_output/part-00000
