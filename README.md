@@ -1,6 +1,6 @@
 Practical 1: Data Wrangling 1 (Nivedita)  
 
-Practical 2: Data Wrangling 2
+Practical 2: Data Wrangling 2 (Pallavi)
 
 Practical 3: Descriptive Statistics
 
