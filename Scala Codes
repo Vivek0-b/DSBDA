@@ -1,0 +1,25 @@
+For running in terminal 
+
+Word count 
+
+import org.apache.spark.sql.SparkSession
+val spark = SparkSession.builder .appName("SimpleWordCount") .master("local[*]") .getOrCreate()
+val sc = spark.sparkContext
+val textFile = sc.textFile("path/to/your/input.txt")
+val wordCounts = textFile.flatMap(line => line.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)
+wordCounts.collect().foreach(println)
+
+Positive or Negative Number 
+
+println("Enter a number:")
+val num = scala.io.StdIn.readDouble()
+{
+  if (num > 0)
+    println("The number is Positive.")
+  else if (num < 0)
+    println("The number is Negative.")
+  else
+    println("The number is Zero.")
+}
+
+
