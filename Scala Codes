@@ -23,3 +23,16 @@ val num = scala.io.StdIn.readDouble()
 }
 
 
+
+
+c. Add environment variables:
+#Edit your .bashrc:
+nano ~/.bashrc
+
+#Add at the end:
+export SPARK_HOME=/opt/spark
+export PATH=$SPARK_HOME/bin:$PATH
+#Apply changes:
+source ~/.bashrc
+#Test Spark:
+spark-shell
